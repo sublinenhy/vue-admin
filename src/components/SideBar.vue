@@ -8,16 +8,10 @@
     </div>
     <div class="menu-wrap">
       <SideBarMenu
-        :menuIconUrl="menuIconOverview"
-        :menuName="menuNameOverview"
-      ></SideBarMenu>
-      <SideBarMenu
-        :menuIconUrl="menuIconOverview"
-        :menuName="menuNameOverview"
-      ></SideBarMenu>
-      <SideBarMenu
-        :menuIconUrl="menuIconOverview"
-        :menuName="menuNameOverview"
+        v-for="item in sMenuItems"
+        :key="item.id"
+        :menuIconUrl="item.menuIcon"
+        :menuName="item.menuName"
       ></SideBarMenu>
     </div>
   </div>
@@ -32,8 +26,28 @@ export default {
   data() {
     return {
       logoIconUrl: require("@/assets/logo-icon.png"),
-      menuIconOverview: require("@/assets/menuIconOverview.png"),
-      menuNameOverview: "Overview"
+      sMenuItems: [
+        {
+          id: 1,
+          menuIcon: require("@/assets/sidebarMenuIcon/overview.png"),
+          menuName: "Overview"
+        },
+        {
+          id: 2,
+          menuIcon: require("@/assets/sidebarMenuIcon/details.png"),
+          menuName: "Details"
+        },
+        {
+          id: 3,
+          menuIcon: require("@/assets/sidebarMenuIcon/manage.png"),
+          menuName: "Manage"
+        },
+        {
+          id: 4,
+          menuIcon: require("@/assets/sidebarMenuIcon/schedule.png"),
+          menuName: "Schedule"
+        }
+      ]
     };
   },
   created() {},
