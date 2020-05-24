@@ -1,5 +1,5 @@
 <template>
-  <div id="sidebar-menu">
+  <div id="sidebar-menu" v-on:click="navTo">
     <div class="menu-wrap">
       <img :src="menuIconUrl" alt="" />
       <p>{{ menuName }}</p>
@@ -8,21 +8,29 @@
 </template>
 
 <script>
+import router from "@/router";
 export default {
   name: "SideBarMenu",
   components: {},
   data() {
-    return {};
+    return {
+      mUrl: this.menuNavUrl
+    };
   },
   created() {},
   mounted() {},
   methods: {
-    //vue中是数据驱动视图
-    //js中是直接操纵DOM元素
+    navTo: function() {
+      router.push({ path: this.mUrl }).catch(err => {
+        console.log("输出报错", err);
+      });
+      // router.push({ path: "/main/overview" });
+    }
   },
   props: {
     menuName: String,
-    menuIconUrl: String
+    menuIconUrl: String,
+    menuNavUrl: String
   },
   watch: {}
 };

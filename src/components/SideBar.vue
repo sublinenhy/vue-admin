@@ -12,6 +12,7 @@
         :key="item.id"
         :menuIconUrl="item.menuIcon"
         :menuName="item.menuName"
+        :menuNavUrl="item.menuNavUrl"
       ></SideBarMenu>
     </div>
   </div>
@@ -30,7 +31,8 @@ export default {
         {
           id: 1,
           menuIcon: require("@/assets/sidebarMenuIcon/overview.png"),
-          menuName: "Overview"
+          menuName: "Overview",
+          menuNavUrl: "/main/overview"
         },
         {
           id: 2,
