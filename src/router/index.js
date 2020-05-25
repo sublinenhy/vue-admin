@@ -4,6 +4,7 @@ import Login from "@/views/Login/index.vue";
 import Main from "@/views/Main.vue";
 import Overview from "@/views/Overview.vue";
 
+//解决错误：Navigating to current location ("XXXXXX") is not allowed
 Vue.use(VueRouter);
 const routerPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {

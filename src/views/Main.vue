@@ -50,10 +50,9 @@ export default {
 }
 .content-wrap {
   margin-left: 250px;
-  width: 100%;
 }
 .content-view {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 </style>

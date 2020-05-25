@@ -1,16 +1,53 @@
 <template>
   <div id="overview">
-    <div class="block-1"></div>
+    <div class="overview-info">Overview</div>
+    <div class="single-data-block-wrap">
+      <SingleDataBlock
+        v-for="item in singleDataItems"
+        :key="item.name"
+        :name="item.name"
+        :amount="item.amount"
+        :rate="item.rate"
+        :info="item.info"
+      ></SingleDataBlock>
+    </div>
   </div>
 </template>
 
 <script>
+import SingleDataBlock from "@/components/SingleDataBlock.vue";
+
 export default {
   name: "Overview",
-  components: {},
+  components: { SingleDataBlock },
   data() {
     return {
-      menuTab: [{ txt: "登陆" }, { txt: "注册" }]
+      singleDataItems: [
+        {
+          name: "Sales",
+          amount: 27903,
+          rate: 1.5,
+          info: "Compared with last year"
+        },
+        {
+          name: "Purchase",
+          amount: 3901,
+          rate: 3.2,
+          info: "Compared with last year"
+        },
+        {
+          name: "Return",
+          amount: 180,
+          rate: 0.4,
+          info: "Compared with last year"
+        },
+        {
+          name: "Deal",
+          amount: 23,
+          rate: 0.1,
+          info: "Compared with last year"
+        }
+      ]
     };
   },
   created() {},
@@ -25,10 +62,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.block-1 {
-  width: 250px;
-  height: 250px;
-  background-color: #fff;
-  border-radius: 5px;
+.overview-info {
+  font-size: 25px;
+  font-weight: 500;
+}
+.single-data-block-wrap {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

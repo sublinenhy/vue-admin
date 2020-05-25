@@ -8,7 +8,9 @@
 </template>
 
 <script>
+//引入router
 import router from "@/router";
+
 export default {
   name: "SideBarMenu",
   components: {},
@@ -21,10 +23,9 @@ export default {
   mounted() {},
   methods: {
     navTo: function() {
-      router.push({ path: this.mUrl }).catch(err => {
+      router.push({ path: this.menuNavUrl }).catch(err => {
         console.log("输出报错", err);
       });
-      // router.push({ path: "/main/overview" });
     }
   },
   props: {
