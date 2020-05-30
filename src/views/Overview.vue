@@ -11,15 +11,22 @@
         :info="item.info"
       ></SingleDataBlock>
     </div>
+    <div class="chart-wrap">
+      <Chart></Chart>
+    </div>
   </div>
 </template>
 
 <script>
 import SingleDataBlock from "@/components/SingleDataBlock.vue";
+import Chart from "@/components/Chart.vue";
 
 export default {
   name: "Overview",
-  components: { SingleDataBlock },
+  components: {
+    SingleDataBlock,
+    Chart
+  },
   data() {
     return {
       singleDataItems: [
@@ -71,5 +78,8 @@ export default {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+.chart-wrap {
+  margin-top: 30px;
 }
 </style>
