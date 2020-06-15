@@ -33,7 +33,7 @@ export default {
 #single-data-block {
   float: left;
   width: 250px;
-  height: 155px;
+  height: 135px;
   border-radius: 20px;
   background-color: #fff;
   margin-right: 20px;

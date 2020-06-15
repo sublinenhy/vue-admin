@@ -29,10 +29,7 @@ export default {
   },
   created() {},
   mounted() {},
-  methods: {
-    //vue中是数据驱动视图
-    //js中是直接操纵DOM元素
-  },
+  methods: {},
   props: {},
   watch: {}
 };
@@ -43,7 +40,7 @@ export default {
   float: left;
   height: 100%;
   width: 100%;
-  background-color: #fdfef0;
+  background-color: #fafafb;
 }
 .sidebar-wrap {
   width: 250px;

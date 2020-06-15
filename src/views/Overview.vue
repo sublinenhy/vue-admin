@@ -80,6 +80,6 @@ export default {
   flex-wrap: wrap;
 }
 .chart-wrap {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 </style>
