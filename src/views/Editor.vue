@@ -2,6 +2,11 @@
   <div id="editor">
     <div class="text-area" contenteditable="true">
       <h1>aaa</h1>
+      <span
+        v-for="item in content"
+        v-html="item.content"
+        :key="item.headingLevel"
+      ></span>
     </div>
   </div>
 </template>
@@ -12,7 +17,16 @@ export default {
   components: {},
   data() {
     return {
-      menuTab: [{ txt: "登陆" }, { txt: "注册" }]
+      content: [
+        {
+          headingLevel: "h1",
+          content: "<h1>这是h1标题</h1>"
+        },
+        {
+          headingLevel: "h2",
+          content: "<h2>这是h2标题</h2>"
+        }
+      ]
     };
   },
   created() {},
