@@ -4,7 +4,4 @@
   </div>
 </template>
 
-<style lang="scss">
-#app {
-}
-</style>
+<style lang="scss"></style>

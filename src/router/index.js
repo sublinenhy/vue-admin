@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Login from "@/views/Login/index.vue";
 import Main from "@/views/Main.vue";
 import Overview from "@/views/Overview.vue";
+import Editor from "@/views/Editor.vue";
 
 //解决错误：Navigating to current location ("XXXXXX") is not allowed
 Vue.use(VueRouter);
@@ -20,6 +21,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: "/editor",
+    name: "Editor",
+    component: Editor
   },
   {
     path: "/main",
